@@ -6,7 +6,8 @@ for (let i = 0; i < x ; i++){
 }
 
 names.sort();
+const ol =  document.getElementById('names');
 
 for (let j = 0; j < x ; j++){
-    document.getElementById('names').innerHTML += names[j] + '<br>';
+   ol.innerHTML += `<li>${names[j]}</li>` + '<br>';
 }
