@@ -1,4 +1,4 @@
-const list = document.getElementById("#target");
+const list = document.getElementById("target");
 
 const list1 = document.createElement("li");
 list1.innerText = "First item"
@@ -11,7 +11,7 @@ list3.innerText = "Third item"
 
 list2.classList.add("my-item")
 
-document.body.appendChild(list1);
-document.body.appendChild(list2);
-document.body.appendChild(list3);
+list.appendChild(list1);
+list.appendChild(list2);
+list.appendChild(list3);
 
