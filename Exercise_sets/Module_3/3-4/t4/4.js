@@ -18,6 +18,6 @@ const html = document.getElementById("target");
 
 for (let i = 0 ; i < 3 ; i++){
     const names = document.createElement("option");
-    names.value = student[i].id;
-
+    names.value = students[i].id;
+    html.appendChild(names);
 }
