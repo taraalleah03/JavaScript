@@ -104,4 +104,12 @@ for (let i = 0; i < 9 ; i++){
 
     const header = document.createElement('h2');
     header.innerText = photo.title;
+
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = photo.image.medium;
+    img.alt = photo.title;
+
+    figure.appendChild(img);
+    figure
 }
