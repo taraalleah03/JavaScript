@@ -37,12 +37,6 @@
                     article.appendChild(header);
 
 
-                    const link = document.createElement('a');
-                    link.href = TVshow.show.url;
-                    link.target = '_blank';
-                    link.innerText = 'More info';
-                    article.appendChild(link);
-
                     if (TVshow.show.image?.medium){
                         const photo = document.createElement('img');
                         photo.src = TVshow.show.image.medium;
@@ -50,18 +44,24 @@
                         article.appendChild(photo);
                     }
 
+                    const link = document.createElement('a');
+                    link.href = TVshow.show.url;
+                    link.target = '_blank';
+                    link.innerText = 'Link for more.';
+                    article.appendChild(link);
+
                     const div = document.createElement('div');
-                    div.innerHTML = TVshow.show.summary;
+                    div.innerHTML = TVshow.show.summary|| 'No summary found';
                     article.appendChild(div);
 
-                    resultsshow.appendChild(article);
+                    results.appendChild(article);
 
                 });
                 console.log(data);
 
             }catch (error) {
                 console.log(error);
-                resultsshow.innerText = 'Error! Cannot fetch TV show/s.'
+                results.innerText = 'Error! Cannot fetch TV show/s.'
             }
         });
 
