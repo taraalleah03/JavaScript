@@ -36,11 +36,32 @@
                     header.innerText = TVshow.show.name;
                     article.appendChild(header);
 
+
+                    const link = document.createElement('a');
+                    link.href = TVshow.show.url;
+                    link.target = '_blank';
+                    link.innerText = 'More info';
+                    article.appendChild(link);
+
+                    if (TVshow.show.image?.medium){
+                        const photo = document.createElement('img');
+                        photo.src = TVshow.show.image.medium;
+                        photo.alt = TVshow.show.name;
+                        article.appendChild(photo);
+                    }
+
+                    const div = document.createElement('div');
+                    div.innerHTML = TVshow.show.summary;
+                    article.appendChild(div);
+
+                    resultsshow.appendChild(article);
+
                 });
                 console.log(data);
 
             }catch (error) {
                 console.log(error);
+                resultsshow.innerText = 'Error! Cannot fetch TV show/s.'
             }
         });
 
