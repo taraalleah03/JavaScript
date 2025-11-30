@@ -110,6 +110,14 @@ for (let i = 0; i < 9 ; i++){
     img.src = photo.image.medium;
     img.alt = photo.title;
 
+    const figcaption = document.createElement('figcaption');
+    figcaption.innerText = photo.caption
+
+    const desc = document.createElement('p');
+    desc.innerText = photo.description;
+
     figure.appendChild(img);
-    figure
+    figure.appendChild(figcaption);
+
+
 }
