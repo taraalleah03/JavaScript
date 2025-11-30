@@ -19,5 +19,6 @@ const html = document.getElementById("target");
 for (let i = 0 ; i < 3 ; i++){
     const names = document.createElement("option");
     names.value = students[i].id;
+    names.textContent= students[i].name;
     html.appendChild(names);
 }
