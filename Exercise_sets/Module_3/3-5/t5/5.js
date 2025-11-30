@@ -93,3 +93,15 @@ const picArray = [
 ];
 
 // add your code here
+
+const section = document.getElementById('pictures');
+
+for (let i = 0; i < 9 ; i++){
+    const photo = picArray[i];
+
+    const article = document.createElement('article');
+    article.classList.add('card');
+
+    const header = document.createElement('h2');
+    header.innerText = photo.title;
+}
