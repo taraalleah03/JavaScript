@@ -118,6 +118,9 @@ for (let i = 0; i < 9 ; i++){
 
     figure.appendChild(img);
     figure.appendChild(figcaption);
-
+    article.appendChild(header);
+    article.appendChild(figure);
+    article.appendChild(desc);
+    section.appendChild(article);
 
 }
